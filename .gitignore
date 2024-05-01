@@ -1,0 +1,11 @@
+/Lab3
+/Lab1/divider
+*.o
+*.x
+
+# trace files
+*.gtkw
+trace.*
+
+# trace required for report
+!trace.svg
