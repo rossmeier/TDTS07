@@ -107,7 +107,7 @@ When introducing a different minimum wait time $m != k$ for the transition from 
 == Traffic Light Controller
 The controller consists of 5 different automata, where opposing directions use the same template. The different automata used are shown in @fig:traffic-automata which also shows that the automata for the different directions are structured nearly the same, with just the synchronization channels swapped.
 #figure(
-  image("traffic_light.png"),
+  image("traffic_light.png", width: 80%),
   caption: "Different automata used for modeling the traffic light controller"
 ) <fig:traffic-automata>
 For simplicity in this model, different from the controller described in @sec:systemc-traffic, the controller does not automatically switch to the other direction if no cars are coming, but is governed by a fixed timer that alternates between both possible directions. The queries ensuring the correct operation of the controller are shown in @lst:traffic-queries although the last query exists similarly for every direction.
@@ -124,7 +124,7 @@ For simplicity in this model, different from the controller described in @sec:sy
 #let img-fixed(..args, scale: 100%) = {
   let img = image(..args)
   style(styles => {
-    image(..args, width: measure(img, styles).width * scale)
+    image(..args, width: measure(img, styles).width * scale * 3)
   })
 }
 
